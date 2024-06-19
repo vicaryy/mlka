@@ -1,0 +1,104 @@
+@import 'vars';
+
+header {
+    width: 100%;
+    min-height: 600px;
+    height: calc(100vh - var(--nav-height));
+    font-family: var(--font-header);
+
+    .image-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transition: opacity 1.2s;
+            // transition: opacity 1.5s .5s;
+
+            &.active {
+                opacity: 1;
+                transition: opacity .7s;
+            }
+        }
+
+
+        .text {
+            margin-left: clamp(2vw, 80px, 8vw);
+            margin-top: 50px;
+            // margin-left: clamp(2vw, 80px, 5vw);
+            // margin-top: clamp(2vw, 80px, 5vw);
+            color: var(--font-color-second);
+            user-select: none;
+
+            h1 {
+                font-size: clamp(6vw, 11rem, 13vw);
+                letter-spacing: -4px;
+                line-height: 65px;
+                line-height: clamp(3vw, 80px, 9.5vw);
+            }
+
+            h2 {
+                font-size: clamp(1vw, 5rem, 7vw);
+                letter-spacing: -2px;
+                margin-left: 1.5px;
+            }
+        }
+
+
+        .image-switches {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            translate: -50% 100%;
+            display: flex;
+            opacity: 0;
+            align-items: center;
+            height: 15px;
+            transition: opacity .3s, translate .5s;
+
+            &>span {
+                padding: 5px 6px;
+                cursor: pointer;
+
+                div {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: var(--bgc-fifth);
+                    z-index: -1;
+                    transition: .6s;
+                }
+
+                &.active {
+
+                    div {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+header:hover {
+    .image-wrapper {
+        .image-switches {
+            opacity: 1;
+            translate: -50% -50%;
+        }
+    }
+}

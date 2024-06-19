@@ -1,0 +1,32 @@
+<header>
+    <div class="image-wrapper">
+        @for (item of images; track $index) {
+        @if ($index === 0) {
+        <img class="active" [src]="item" alt="">
+        }
+        @else {
+        <img class [src]="item" alt="">
+        }
+        }
+
+        <div class="text">
+            <h1>MLKA</h1>
+            <h2>{{ text }}</h2>
+        </div>
+
+        <div class="image-switches">
+            @for (item of images; track $index) {
+            @if ($index === 0) {
+            <span [className]="'switch-' + $index + ' active'" (click)="switchImage($event)">
+                <div></div>
+            </span>
+            }
+            @else {
+            <span [className]="'switch-' + $index" (click)="switchImage($event)">
+                <div></div>
+            </span>
+            }
+            }
+        </div>
+    </div>
+</header>

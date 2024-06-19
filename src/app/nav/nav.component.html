@@ -1,2 +1,20 @@
-<span routerLink="">home</span>
-<span routerLink="test">test</span>
+<div class="nav-block"></div>
+<nav>
+    <div routerLink="" class="logo">
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+
+    <div class="hamburger" [class.active]="hamburgerActive" (click)="hamburgerActive = !hamburgerActive">
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="nav-buttons">
+        <ul>
+            <li routerLink="czyste-powietrze" class="btn-clean"><span>CZYSTE POWIETRZE</span></li>
+            <li routerLink="o-nas" class="btn-about"><span>O NAS</span></li>
+            <li routerLink="realizacje" class="btn-real"><span>REALIZACJE</span></li>
+            <li routerLink="aktualnosci" class="btn-akt"><span>AKTUALNOŚCI</span></li>
+            <li routerLink="kontakt" class="btn-contact"><span>KONTAKT</span></li>
+        </ul>
+    </div>
+</nav>

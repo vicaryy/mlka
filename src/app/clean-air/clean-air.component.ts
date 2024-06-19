@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../shared/components/header/header.component";
 
 @Component({
-    selector: 'app-home',
+    selector: 'app-clean-air',
     standalone: true,
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.scss',
+    templateUrl: './clean-air.component.html',
+    styleUrl: './clean-air.component.scss',
     imports: [HeaderComponent]
 })
-export class HomeComponent {
+export class CleanAirComponent {
 
 }
