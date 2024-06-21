@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { TestComponent } from './test/test.component';
 import { CleanAirComponent } from './clean-air/clean-air.component';
 import { AboutComponent } from './about/about.component';
 import { RealizationsComponent } from './realizations/realizations.component';
@@ -10,26 +9,37 @@ import { ContactComponent } from './contact/contact.component';
 export const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
+    title: "MLKA · Strona Główna"
   },
   {
     path: "czyste-powietrze",
-    component: CleanAirComponent
+    title: "MLKA · Czyste powietrze",
+    loadComponent: () => import('./clean-air/clean-air.component').then(e => e.CleanAirComponent)
   },
   {
     path: "o-nas",
-    component: AboutComponent
+    component: AboutComponent,
+    title: "MLKA · O nas"
   },
   {
     path: "realizacje",
-    component: RealizationsComponent
+    component: RealizationsComponent,
+    title: "MLKA · Realizacje"
   },
   {
     path: "aktualnosci",
-    component: NewsComponent
+    component: NewsComponent,
+    title: "MLKA · Aktualności"
   },
   {
     path: "kontakt",
-    component: ContactComponent
+    component: ContactComponent,
+    title: "MLKA · Kontakt"
+  },
+  {
+    path: "**",
+    title: "MLKA · 404 - Nie znaleziono",
+    loadComponent: () => import('./not-found/not-found.component').then(e => e.NotFoundComponent)
   }
 ];

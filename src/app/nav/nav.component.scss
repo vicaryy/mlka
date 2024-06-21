@@ -156,6 +156,14 @@ nav {
     }
 }
 
+.nav-block.disable {
+    display: none;
+}
+
+nav.disable {
+    display: none;
+}
+
 @media (min-width: 1000px) {
     nav {
 
