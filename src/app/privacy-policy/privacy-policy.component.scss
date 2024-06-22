@@ -1,0 +1,16 @@
+@import 'vars';
+
+.privacy-policy {
+    padding: 50px;
+    background-color: var(--bgc-second);
+
+
+    h3 {
+        margin: 5px 0;
+    }
+
+    h2 {
+        margin: 30px 0 5px 0;
+        font-weight: normal;
+    }
+}
