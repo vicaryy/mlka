@@ -38,21 +38,30 @@ header {
             margin-top: 50px;
             // margin-left: clamp(2vw, 80px, 5vw);
             // margin-top: clamp(2vw, 80px, 5vw);
-            color: var(--font-color-second);
-            user-select: none;
 
             h1 {
-                font-size: clamp(6vw, 11rem, 13vw);
-                letter-spacing: -4px;
-                line-height: 65px;
-                line-height: clamp(3vw, 80px, 9.5vw);
+                color: var(--font-color-second);
+                user-select: none;
+
+                span:first-of-type {
+                    display: block;
+                    font-size: clamp(6vw, 11rem, 13vw);
+                    letter-spacing: -4px;
+                    line-height: 65px;
+                    line-height: clamp(3vw, 80px, 9.5vw);
+                    text-transform: uppercase;
+                }
+
+                span:last-of-type {
+                    display: block;
+                    font-size: clamp(1vw, 5rem, 7vw);
+                    letter-spacing: -2px;
+                    margin-left: 1.5px;
+                    text-transform: uppercase;
+                }
             }
 
-            h2 {
-                font-size: clamp(1vw, 5rem, 7vw);
-                letter-spacing: -2px;
-                margin-left: 1.5px;
-            }
+
         }
 
 

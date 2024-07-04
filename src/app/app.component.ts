@@ -12,5 +12,10 @@ import { NotFoundComponent } from "./not-found/not-found.component";
     imports: [RouterOutlet, NavComponent, FooterComponent, NotFoundComponent]
 })
 export class AppComponent {
-  title = 'mlka';
+
+    title = 'mlka';
+
+    scrollToTop() {
+        window.scroll(0, 0);
+    }
 }

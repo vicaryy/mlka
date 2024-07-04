@@ -2,16 +2,18 @@
     <div class="image-wrapper">
         @for (item of images; track $index) {
         @if ($index === 0) {
-        <img class="active" [src]="item" alt="">
+        <img class="active" [src]="item" alt="Wykonana budowla nr. {{$index + 1}}">
         }
         @else {
-        <img class [src]="item" alt="">
+        <img class [src]="item" loading="lazy" alt="Wykonana budowla nr. {{$index + 1}}">
         }
         }
 
         <div class="text">
-            <h1>MLKA</h1>
-            <h2>{{ text }}</h2>
+            <h1>
+                <span>MLKA </span>
+                <span>{{ text }}</span>
+            </h1>
         </div>
 
         <div class="image-switches">
